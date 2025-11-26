@@ -1,0 +1,73 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Student {
+private:
+    string name;
+    int age;
+    int grade;
+
+public:
+    // Constructor to set all data members
+    Student(string n, int a, int g) {
+        name = n;
+        age = a;
+        grade = g;
+    }
+
+    // Member function to print details
+    void printDetails() {
+        cout << "Student Name: " << name << endl;
+        cout << "Age: " << age << endl;
+        cout << "Grade: " << grade << endl;
+    }
+};
+
+int main() {
+    // Create an object of Student class
+    Student s1("John Doe", 16, 10);
+
+    // Print student details
+    s1.printDetails();
+
+    return 0;
+}
+
+
+Question 2
+
+#include <iostream>
+using namespace std;
+
+class Calculator {
+public:
+    // Overloaded add() for two integers
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    // Overloaded add() for three integers
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Overloaded add() for two doubles
+    double add(double a, double b) {
+        return a + b;
+    }
+};
+
+int main() {
+    Calculator calc;
+
+    int sum1 = calc.add(5, 10);            // two integers
+    int sum2 = calc.add(3, 7, 2);          // three integers
+    double sum3 = calc.add(4.5, 2.3);      // two doubles
+
+    cout << "Sum of two integers: " << sum1 << endl;
+    cout << "Sum of three integers: " << sum2 << endl;
+    cout << "Sum of two doubles: " << sum3 << endl;
+
+    return 0;
+}
