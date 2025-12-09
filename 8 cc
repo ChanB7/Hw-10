@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+float rectangleArea(float length, float width) {
+    return length * width;
+}
+
+float triangleArea(float base, float height) {
+    return 0.5 * base * height;
+}
+
+float squareArea(float side) {
+    return side * side;
+}
+
+float circleArea(float radius) {
+    return 3.14159 * radius * radius;
+}
+
+int main() {
+    float l, w, base, height, side, radius;
+    
+    cout << "Enter length and width of rectangle: ";
+    cin >> l >> w;
+    cout << "Area of Rectangle: " << rectangleArea(l, w) << endl;
+
+    cout << "Enter base and height of triangle: ";
+    cin >> base >> height;
+    cout << "Area of Triangle: " << triangleArea(base, height) << endl;
+
+    cout << "Enter side of square: ";
+    cin >> side;
+    cout << "Area of Square: " << squareArea(side) << endl;
+
+    cout << "Enter radius of circle: ";
+    cin >> radius;
+    cout << "Area of Circle: " << circleArea(radius) << endl;
+
+    return 0;
+}
